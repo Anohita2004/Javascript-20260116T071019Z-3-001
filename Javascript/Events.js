@@ -53,3 +53,18 @@ input_name.addEventListener("click",function(){
 input_name.addEventListener("input",function(details){
     console.log(details.data);
 })
+
+//I want the heading to change asper the option selected by me
+let selection = document.querySelectorAll("select option");
+selection.forEach(function(option){
+    option.addEventListener("select",function(){
+        let heading = document.querySelector("h1");
+        // cSpell:ignore Sheriyans
+        heading.textContent=`Welcome to Sheriyans `+ option.textContent;
+    });
+});
+let selectBox = document.querySelector("select");
+selectBox.addEventListener("change",function(details){
+    let heading = document.querySelector("h1");
+    heading.style.color="purple";
+    heading.textContent=`Welcome to Sheriyans `+ details.target.value;});
