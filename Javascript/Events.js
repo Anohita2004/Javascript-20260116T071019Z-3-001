@@ -23,3 +23,13 @@ p.addEventListener("click",function(){
 p.addEventListener("dblclick",function(){
     p.style.backgroundColor="white";
     p.style.color="black";});
+//Removing an event listener
+
+let butt = document.querySelector("button");
+function changingColor(){
+    butt.style.borderWidth="10px";
+    butt.style.borderColor="green";
+
+}
+butt.addEventListener("click",changingColor);
+butt.removeEventListener("click",changingColor);
