@@ -49,3 +49,7 @@ input_name.addEventListener("input",function(){
 input_name.addEventListener("click",function(){
     input_name.style.backgroundColor="lightblue";
 });
+//using the data attribute
+input_name.addEventListener("input",function(details){
+    console.log(details.data);
+})
