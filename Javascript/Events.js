@@ -33,3 +33,19 @@ function changingColor(){
 }
 butt.addEventListener("click",changingColor);
 butt.removeEventListener("click",changingColor);
+
+//Counting the number of letters you typed in the input box
+let input_name = document.querySelector("input");
+let count =0;
+input_name.addEventListener("input",function(){
+    count+=1;
+    console.log("You have typed "+count+" letters");
+});//since this depends on the loop running,evenif we de;ete an element it increases the count
+input_name.addEventListener("input",function(){
+    count =input_name.value.length;
+    letter=input_name.value;
+    console.log("You have typed "+count+" letters: "+letter);
+})
+input_name.addEventListener("click",function(){
+    input_name.style.backgroundColor="lightblue";
+});
