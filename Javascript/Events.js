@@ -68,3 +68,10 @@ selectBox.addEventListener("change",function(details){
     let heading = document.querySelector("h1");
     heading.style.color="purple";
     heading.textContent=`Welcome to Sheriyans `+ details.target.value;});
+
+window.addEventListener("keydown",function(details){
+    console.log(details.key);
+    let heading_5 = document.querySelector("h5");
+    heading_5.textContent=details.key;
+
+});
